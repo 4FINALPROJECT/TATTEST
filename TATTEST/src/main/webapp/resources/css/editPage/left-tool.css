@@ -1,0 +1,34 @@
+ td{
+     text-align: left;
+     font-size: 20px;
+ }   
+ .LeftImg{
+     width: 200px;
+     height: 170px;
+ }
+ .content{
+     font-size: 20px;  
+     width: 340px;
+     height: 500px;
+     background: gold;
+     border-radius: 20px;
+     display: none;
+     z-index: 1;
+     overflow-y: scroll;
+     position: absolute;
+ }
+ body{    
+     background-size: 100%;
+ }
+ #tool_menu{
+     position: absolute;
+ }
+ #tool_menu2{
+     position: absolute;
+ }
+ #tool_menu3{
+     position: absolute;
+ }
+ #tool_menu4{
+     position: absolute;
+ }

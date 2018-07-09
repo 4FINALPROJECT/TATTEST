@@ -1,0 +1,227 @@
+.tat-wrap {
+    width: 100%;
+}
+.tat-head {
+	width: 100%;
+	height: 50px;
+	border: 1px solid rgba(255, 255, 255, 0.94);
+	box-shadow: 0 0 14px 0 rgba(22, 45, 61, 0.36);
+	display: inline-block;
+	z-index:9999;
+}
+
+.tat-head-hide {
+	position: absolute;
+	text-align: center;
+	left: calc(50% - 57px);
+	width: 115px;
+	height: 12px;
+	top: -1px;
+	border: 1px solid #d9e1e8;
+	background-color: #eaf7ff;
+	border-bottom-left-radius: 7px;
+	border-bottom-right-radius: 7px;
+	cursor: pointer;
+	transition: 0.6s cubic-bezier(0.645, 0.045, 0.355, 1) height;
+}
+.tat-head-hide > div {
+    transition: 0.6s cubic-bezier(0.645, 0.045, 0.355, 1) margin-top;
+    color: #162d3c;
+    height: 4px;
+    vertical-align: top;
+    margin-top: -6px;
+    margin-left: -2px;
+}
+#tat-head-logo {
+	border-right: 1px solid #caffff;
+	float: left;
+	width: 30%;
+	height: 50px;
+}
+
+.tat-head-content-left {
+	float: left;
+	text-align: center;
+	height: 100%;
+	width: 25%;
+}
+
+.tat-head-content-center {
+	text-align: center;
+	height: 100%;
+	float: left;
+	width: 30%;
+}
+.tat-head-content-right {
+	float: right;
+	text-align: center;
+	height: 100%;
+	width: 45%;
+}
+.tat-head-content-left > .tat-my-page {
+	float: left;
+	display: inline-block;
+	position: relative;
+	padding: 15px;
+	width: 70%;
+}
+.tat-head-content-right > div {
+	border-left: 1px solid #caffff;
+	display: inline-block;
+	float: right;
+	position: relative;
+	height: 100%;
+	padding: 15px;
+}
+.tat-head-content-center > div {
+	display: inline-block;
+	padding-top: 15px;
+	padding-left: 15px;
+}
+.tat-my-page {
+	border-right: 1px solid #caffff;
+	height: 100%;
+}
+/* .tat-head-content > div {
+	width: 28px;
+	height: 28px;
+	margin: 0 8px 0 0;
+	border-radius: 50%;
+	border: 1px solid #b6c1cd;
+	box-shadow : 0 0 14px 0 rgba(22, 45, 61, 0.36);
+	display: inline-block;
+	position: relative;
+	font-size: small;
+}
+.tat-edit-alarm-wrap {
+	float: right;
+	position: absolute;
+	z-index: 9999;
+	box-shadow : 0 0 14px 0 rgba(22, 45, 61, 0.36);
+}
+.tat-edit-user-wrap {
+	float: right;
+	position: absolute;
+	z-index: 9999;
+	box-shadow : 0 0 14px 0 rgba(22, 45, 61, 0.36);
+}
+
+.tat-edit-alarm {
+	position: absolute;
+	display: none;
+	top: 40px;
+	left: -450px;
+	width: 500px;
+	height: 500px;
+	box-shadow : 0 0 14px 0 rgba(22, 45, 61, 0.36);
+	background: white;
+	z-index: 10000;
+}
+.tat-edit-user {
+	position: absolute;
+	display: none;
+	top: 40px;
+	left: -470px;
+	width: 500px;
+	height: 500px;
+	box-shadow : 0 0 14px 0 rgba(22, 45, 61, 0.36);
+	background: white;
+	z-index: 10000;
+} */
+
+.tat-body {
+    margin: 0;
+}
+/* >div란 안에 body(section) 컨텐츠
+영역을 지정하는거입니다. */
+.tat-body > .edit-wrap {
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    z-index: 1;
+}
+.tat-body > .edit-wrap > div {
+    position: relative;
+    z-index: 1;
+}
+
+/* 좌측 툴바 */
+.edit-left-tool {
+    float: left;
+    z-index: 9999;
+    position: absolute;
+    width: 10%;
+    height: 500px;
+    top: 150px;
+    left: 5px;
+    text-align: center;
+}
+/* 우측 툴바 */
+.edit-right-tool {
+    float: right;
+    z-index: 9999;
+    position: absolute;
+    width: 10%;
+    height: 500px;
+    top: 50px;
+    right: 2px;
+    text-align: center;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.94);
+    box-shadow: 0 0 14px 0 rgba(22, 45, 61, 0.36);
+}
+.edit-left-tool > div {
+    display: table;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.94);
+    box-shadow: 0 0 14px 0 rgba(22, 45, 61, 0.36);
+}
+.edit-right-tool > div {
+    padding: 10px;
+    position: relative;
+    border-bottom: 1px solid rgba(22, 45, 61, 0.36); 
+}
+.drag-header {
+    margin: 0;
+}
+
+.edit-view-head-wrap {
+    border-bottom: 3px dashed red;
+}
+.edit-view-body-wrap {
+    border-bottom: 3px dashed red;
+}
+.edit-view-foot-wrap {
+	
+}
+
+.edit-view-head {
+	display: inline-block;
+	width: 80%;
+	height: 200px;
+   	border-left: 3px dashed red;
+	border-right: 3px dashed red;
+}
+.edit-view-body {
+	display: inline-block;
+	width: 80%;
+	height: 500px;
+   	border-left: 3px dashed red;
+	border-right: 3px dashed red;
+}
+.edit-view-foot {
+	display: inline-block;
+	width: 80%;
+	height: 100px;
+    border-left: 3px dashed red;
+	border-right: 3px dashed red;
+}
+
+@media all and (max-width: 1200px) {
+	.tat-wrap {
+		width: 1200px;
+		position: absolute;
+	}
+}

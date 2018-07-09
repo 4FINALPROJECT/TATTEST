@@ -9,13 +9,13 @@ public class MainController {
 	// 기능소개 페이지 이동
 	@RequestMapping("/main/Feature.tat")
 	public String Feature(){
-		return "mainPage/mainPage_Feature";
+		return "myPage/myPage_Main";
 	}
 	
 	// 템플릿 페이지 이동
 	@RequestMapping("/main/Template.tat")
 	public String Template(){
-		return "mainPage/mainPage_Template";
+		return "editPage/editPage_Main";
 	}
 	
 	// 프리미엄 페이지 이동

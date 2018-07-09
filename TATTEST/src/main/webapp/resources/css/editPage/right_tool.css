@@ -1,0 +1,76 @@
+#objectData{
+	top: 100px;
+	right: 2px;
+    width : 92px;
+    text-align : center;
+    position: absolute;
+    padding : 10px;
+    z-index: 10;
+    color : rgba(92, 92, 92, 0.9);
+    background : rgb(251, 253, 255);
+    border : 1px solid rgba(0,0,0,0.2);
+    border-radius: 15px;
+    cursor : move;
+}
+#objectData img{
+	width : 20px;
+	height : 20px;
+	cursor : pointer;
+}
+.objectData_txt{
+	color : rgba(92, 92, 92, 0.9);
+    width : 35px;
+    float: right;
+    top : 3px;
+    border-radius: 3px;
+    position : relative;
+}
+.objectData_name_txt{
+    font-family: Arial;
+    font-size: 20px;
+}
+#item_inpo{
+	position : absolute;
+    display: none;
+    background: rgba(231, 231, 231, 0.7);
+    border : 1px solid black;
+    border-radius : 20px;
+    z-index : 9000;
+}
+.item_button{
+    border-radius : 30px;
+    text-align : center;
+    border : 1px solid rgba(0,0,0,0.6);
+    font-size : 17px;
+    width : 70px;
+    cursor: pointer;
+}
+.inpo_menu{
+    display : none;
+    width : 160px;
+    border-radius : 13px;
+    border : 1px solid rgb(189, 189, 189);
+    background : rgb(198, 255, 249);
+    position : absolute;
+    padding : 10px;
+    z-index : 8999;
+}
+.inpo_menu_source{
+    float: right;
+    position: relative;
+}
+.inpo_menu_source_name{
+    top : 30px;
+    position: relative;
+}
+.inpo_menu input{
+    float : right;
+    width : 50px;
+    border-radius : 6px;
+    position: relative;
+}
+.inpo_menu label{
+    position: relative;
+    font-size : 13px;
+    font-family : "바탕";
+}
