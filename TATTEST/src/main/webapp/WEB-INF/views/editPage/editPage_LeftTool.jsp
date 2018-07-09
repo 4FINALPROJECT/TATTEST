@@ -64,12 +64,12 @@
 
       <div id="tool_menu2-1" class="content">
          <br>페이지 배경 <br>
-         <br> <img class="LeftImg" src="../../resources/images/editPage/LeftTool-img/Background/flower1.PNG"
-            onclick="changeimg('../../resources/images/editPage/LeftTool-img/Background/flower1.PNG')">
-         <img class="LeftImg" src="../../resources/images/editPage/LeftTool-img/Background/flower2.PNG"
-            onclick="changeimg('../../resources/images/editPage/LeftTool-img/Background/flower2.PNG')">
-         <img class="LeftImg" src="../../resources/images/editPage/LeftTool-img/Background/city1.PNG"
-            onclick="changeimg('../../resources/images/editPage/LeftTool-img/Background/city1.PNG')">
+         <br> <img class="LeftImg" src="${pageContext.request.contextPath}/resources/images/editPage/LeftTool-img/Background/flower1.PNG"
+            onclick="changeimg('${pageContext.request.contextPath}/resources/images/editPage/LeftTool-img/Background/flower1.PNG')">
+         <img class="LeftImg" src="${pageContext.request.contextPath}/resources/images/editPage/LeftTool-img/Background/flower2.PNG"
+            onclick="changeimg('${pageContext.request.contextPath}/resources/images/editPage/LeftTool-img/Background/flower2.PNG')">
+         <img class="LeftImg" src="${pageContext.request.contextPath}/resources/images/editPage/LeftTool-img/Background/city1.PNG"
+            onclick="changeimg('${pageContext.request.contextPath}/resources/images/editPage/LeftTool-img/Background/city1.PNG')">
 
       </div>
 
@@ -156,43 +156,43 @@
       <div id="tool_menu3-2" class="content">
          <br>이미지
          <div>
-            <img class="LeftImg" src="../../resources/images/editPage/LeftTool-img/Image/img1.jpg" alt="">
+            <img class="LeftImg" src="${pageContext.request.contextPath}/resources/images/editPage/LeftTool-img/Image/img1.jpg" alt="">
          </div>
       </div>
       <div id="tool_menu3-3" class="content">
          <br>갤러리
          <div>
-            <img class="LeftImg" src="../../resources/images/editPage/LeftTool-img/Gallery/gallery1.png" alt="">
+            <img class="LeftImg" src="${pageContext.request.contextPath}/resources/images/editPage/LeftTool-img/Gallery/gallery1.png" alt="">
          </div>
       </div>
       <div id="tool_menu3-4" class="content">
          <br>벡터아트
          <div>
-            <img class="LeftImg" src="../../resources/images/editPage/LeftTool-img/VectorArt/vectorart1.png" alt="">
+            <img class="LeftImg" src="${pageContext.request.contextPath}/resources/images/editPage/LeftTool-img/VectorArt/vectorart1.png" alt="">
          </div>
       </div>
       <div id="tool_menu3-5" class="content">
          <br>모양
          <div>
-            <img class="LeftImg" src="../../resources/images/editPage/LeftTool-img/Figure/figure1.png" alt="">
+            <img class="LeftImg" src="${pageContext.request.contextPath}/resources/images/editPage/LeftTool-img/Figure/figure1.png" alt="">
          </div>
       </div>
       <div id="tool_menu3-6" class="content">
          <br>인터랙티브
          <div>
-            <img class="LeftImg" src="../../resources/images/editPage/LeftTool-img/InterActive/interactive1.png" alt="">
+            <img class="LeftImg" src="${pageContext.request.contextPath}/resources/images/editPage/LeftTool-img/InterActive/interactive1.png" alt="">
          </div>
       </div>
       <div id="tool_menu3-7" class="content">
          <br>버튼
          <div>
-            <img class="LeftImg" src="../../resources/images/editPage/LeftTool-img/Button/Btn1.png" alt="">
+            <img class="LeftImg" src="${pageContext.request.contextPath}/resources/images/editPage/LeftTool-img/Button/Btn1.png" alt="">
          </div>
       </div>
       <div id="tool_menu3-8" class="content">
          <br>상자
          <div>
-            <img class="LeftImg" src="../../resources/images/editPage/LeftTool-img/Box/Box1.png" alt="">
+            <img class="LeftImg" src="${pageContext.request.contextPath}/resources/images/editPage/LeftTool-img/Box/Box1.png" alt="">
          </div>
       </div>
       <div id="tool_menu3-9" class="content">
@@ -217,7 +217,7 @@
          <br>메뉴
          <div>
             <img class="LeftImg" style="height: 50px; width: 300px;" 
-            src="../../resources/images/editPage/LeftTool-img/Menubar/menubar1.png" alt="">
+            src="${pageContext.request.contextPath}/resources/images/editPage/LeftTool-img/Menubar/menubar1.png" alt="">
          </div>
       </div>
 
