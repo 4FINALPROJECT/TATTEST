@@ -1,11 +1,57 @@
+$('#BgColor-tool').on('click', function(){
+	$('#BgColor-content').css({
+		"display" : "block"
+	});
+});
 
-$('#t1').hover(function(){
+$('#orange-bg').on('click', function(){
+	$('body').css({
+		"background" : "orange"
+	});
+});
+
+$('#red-bg').on('click', function(){
+	$('body').css({
+		"background" : "red"
+	});
+});
+
+$('#yellow-bg').on('click', function(){
+	$('body').css({
+		"background" : "yellow"
+	});
+});
+
+$('#green-bg').on('click', function(){
+	$('body').css({
+		"background" : "green"
+	});
+});
+
+$('#blue-bg').on('click', function(){
+	$('body').css({
+		"background" : "blue"
+	});
+});
+
+$('#navy-bg').on('click', function(){
+	$('body').css({
+		"background" : "navy"
+	});
+});
+
+//function changeimg(cimg){
+//    var body = document.getElementsByTagName('body');
+//    body[0].style.backgroundImage="url("+cimg+")";
+//}
+
+$('#tool_folder').hover(function(){
     $(this).text("메뉴 및 페이지");
 }).mouseout(function(){
     $(this).text("");
 });
 
-$('#t2').hover(function(){
+$('#tool_bg').hover(function(){
     $(this).text("배경");
 }).mouseout(function(){
     $(this).text("");
@@ -17,11 +63,12 @@ $('#tool_plus').hover(function(){
     $(this).text("");
 });
 
-$('#t4').hover(function(){
+$('#tool_upload').hover(function(){
     $(this).text("내 업로드");
 }).mouseout(function(){
     $(this).text("");
 });
+
 $('#tool_folder').on('click',function(){
     var x = $(this).offset();
     var test = $("#tool_menu").offset();
@@ -46,7 +93,7 @@ $('#category-1').on('click',function(){
     console.log(x);
     $('#tool_menu-1').css({
         "top" : x.top-170,
-        "left" : x.left +200
+        "left" : x.left +150
     });
     $('#tool_menu-1').css("display", "block")
     $('#tool_menu-1').css("z-index", "900")
@@ -59,7 +106,7 @@ $('#category-2').on('click',function(){
     console.log(x);
     $('#tool_menu-2').css({
         "top" : x.top-170,
-        "left" : x.left +200
+        "left" : x.left +150
     });
     $('#tool_menu-2').css("display", "block")
     $('#tool_menu-1').hide();
@@ -88,8 +135,8 @@ $('#category2-1').on('click',function(){
     console.log(test);
     console.log(x);
     $('#tool_menu2-1').css({
-        "top" : x.top-233,
-        "left" : x.left +200
+        "top" : x.top-236,
+        "left" : x.left +150
     });
     $('#tool_menu2-1').css("display", "block")
     $('#tool_menu2-1').css("z-index", "10")
@@ -101,8 +148,8 @@ $('#category2-2').on('click',function(){
     console.log(test);
     console.log(x);
     $('#tool_menu2-2').css({
-        "top" : x.top-233,
-        "left" : x.left +200
+    	"top" : x.top-236,
+        "left" : x.left +150
     });
     $('#tool_menu2-2').css("display", "block")
     $('#tool_menu2-1').hide();
@@ -131,8 +178,8 @@ $('#category3-1').on('click',function(){
     console.log(test);
     console.log(x);
     $('#tool_menu3-1').css({
-        "top" : x.top-297,
-        "left" : x.left +200
+        "top" : x.top-300,
+        "left" : x.left +150
     });
     $('#tool_menu3-1').css("display", "block")
     $('#tool_menu3-1').css("z-index", "10")
@@ -145,8 +192,8 @@ $('#category3-2').on('click',function(){
     console.log(test);
     console.log(x);
     $('#tool_menu3-2').css({
-        "top" : x.top-297,
-        "left" : x.left +200
+    	"top" : x.top-300,
+        "left" : x.left +150
     });
     $('#tool_menu3-2').css("display", "block")
     $('#tool_menu3-1').hide();
@@ -170,8 +217,8 @@ $('#category3-3').on('click',function(){
     console.log(test);
     console.log(x);
     $('#tool_menu3-3').css({
-        "top" : x.top-297,
-        "left" : x.left +200
+    	"top" : x.top-300,
+        "left" : x.left +150
     });
     $('#tool_menu3-3').css("display", "block")
     $('#tool_menu3-1').hide();
@@ -195,8 +242,8 @@ $('#category3-4').on('click',function(){
     console.log(test);
     console.log(x);
     $('#tool_menu3-4').css({
-        "top" : x.top-297,
-        "left" : x.left +200
+    	"top" : x.top-300,
+        "left" : x.left +150
     });
     $('#tool_menu3-4').css("display", "block")
     $('#tool_menu3-1').hide();
@@ -220,8 +267,8 @@ $('#category3-5').on('click',function(){
     console.log(test);
     console.log(x);
     $('#tool_menu3-5').css({
-        "top" : x.top-297,
-        "left" : x.left +200
+    	"top" : x.top-300,
+        "left" : x.left +150
     });
     $('#tool_menu3-5').css("display", "block")
     $('#tool_menu3-1').hide();
@@ -245,8 +292,8 @@ $('#category3-6').on('click',function(){
     console.log(test);
     console.log(x);
     $('#tool_menu3-6').css({
-        "top" : x.top-297,
-        "left" : x.left +200
+    	"top" : x.top-300,
+        "left" : x.left +150
     });
     $('#tool_menu3-6').css("display", "block")
     $('#tool_menu3-1').hide();
@@ -270,8 +317,8 @@ $('#category3-7').on('click',function(){
     console.log(test);
     console.log(x);
     $('#tool_menu3-7').css({
-        "top" : x.top-297,
-        "left" : x.left +200
+    	"top" : x.top-300,
+        "left" : x.left +150
     });
     $('#tool_menu3-7').css("display", "block")
     $('#tool_menu3-1').hide();
@@ -295,8 +342,8 @@ $('#category3-8').on('click',function(){
     console.log(test);
     console.log(x);
     $('#tool_menu3-8').css({
-        "top" : x.top-297,
-        "left" : x.left +200
+    	"top" : x.top-300,
+        "left" : x.left +150
     });
     $('#tool_menu3-8').css("display", "block")
     $('#tool_menu3-1').hide();
@@ -321,8 +368,8 @@ $('#category3-9').on('click',function(){
     console.log(test);
     console.log(x);
     $('#tool_menu3-9').css({
-        "top" : x.top-297,
-        "left" : x.left +200
+    	"top" : x.top-300,
+        "left" : x.left +150
     });
     $('#tool_menu3-9').css("display", "block")
     $('#tool_menu3-1').hide();
@@ -347,8 +394,8 @@ $('#category3-10').on('click',function(){
     console.log(test);
     console.log(x);
     $('#tool_menu3-10').css({
-        "top" : x.top-297,
-        "left" : x.left +200
+    	"top" : x.top-300,
+        "left" : x.left +150
     });
     $('#tool_menu3-10').css("display", "block")
     $('#tool_menu3-1').hide();
@@ -373,8 +420,8 @@ $('#category3-11').on('click',function(){
     console.log(test);
     console.log(x);
     $('#tool_menu3-11').css({
-        "top" : x.top-297,
-        "left" : x.left +200
+    	"top" : x.top-300,
+        "left" : x.left +150
     });
     $('#tool_menu3-11').css("display", "block")
     $('#tool_menu3-1').hide();
@@ -399,8 +446,8 @@ $('#category3-12').on('click',function(){
     console.log(test);
     console.log(x);
     $('#tool_menu3-12').css({
-        "top" : x.top-297,
-        "left" : x.left +200
+    	"top" : x.top-300,
+        "left" : x.left +150
     });
     $('#tool_menu3-12').css("display", "block")
     $('#tool_menu3-1').hide();
@@ -425,8 +472,8 @@ $('#category3-13').on('click',function(){
     console.log(test);
     console.log(x);
     $('#tool_menu3-13').css({
-        "top" : x.top-297,
-        "left" : x.left +200
+    	"top" : x.top-300,
+        "left" : x.left +150
     });
     $('#tool_menu3-13').css("display", "block")
     $('#tool_menu3-1').hide();
@@ -451,8 +498,8 @@ $('#category3-14').on('click',function(){
     console.log(test);
     console.log(x);
     $('#tool_menu3-14').css({
-        "top" : x.top-297,
-        "left" : x.left +200
+    	"top" : x.top-300,
+        "left" : x.left +150
     });
     $('#tool_menu3-14').css("display", "block")
     $('#tool_menu3-1').hide();
@@ -477,8 +524,8 @@ $('#category3-15').on('click',function(){
     console.log(test);
     console.log(x);
     $('#tool_menu3-15').css({
-        "top" : x.top-297,
-        "left" : x.left +200
+    	"top" : x.top-300,
+        "left" : x.left +150
     });
     $('#tool_menu3-15').css("display", "block")
     $('#tool_menu3-1').hide();
@@ -648,7 +695,7 @@ $(document).mouseup(function(e){
 // 배경화면 변경 스크립트
 function changeimg(cimg){
     var body = document.getElementsByTagName('body');
-body[0].style.backgroundImage="url("+cimg+")";
+    body[0].style.backgroundImage="url("+cimg+")";
 }
 
 // 드래그 앤 드롭 스크립트
@@ -678,10 +725,14 @@ var resizeOpts = {
                 //Create counter
                 start: function() { counts[0]++; }
                 });
-                
+                $(".btn").draggable({
+                helper: "clone",
+                //Create counter
+                start: function() { counts[0]++; }
+                });
         $(".edit-wrap").droppable({
         drop: function(e, ui){
-        if(ui.draggable.hasClass("dragTEXT") || ui.draggable.hasClass("dragTEXT2") || ui.draggable.hasClass("dragP") || ui.draggable.hasClass("dragFONT")) {
+        if(ui.draggable.hasClass("dragTEXT") || ui.draggable.hasClass("dragTEXT2") || ui.draggable.hasClass("dragP") || ui.draggable.hasClass("dragFONT") || ui.draggable.hasClass("btn")) {
         $(".edit-view-body").append($(ui.helper).clone());
      //Pointing to the dragImg class in dropHere and add new class.	
      $(".edit-view-body .dragTEXT").addClass("item-"+counts[0]);
