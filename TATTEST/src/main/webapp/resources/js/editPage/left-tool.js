@@ -678,12 +678,12 @@ var resizeOpts = {
                 //Create counter
                 start: function() { counts[0]++; }
                 });
-
+                
         $(".edit-wrap").droppable({
         drop: function(e, ui){
         if(ui.draggable.hasClass("dragTEXT") || ui.draggable.hasClass("dragTEXT2") || ui.draggable.hasClass("dragP") || ui.draggable.hasClass("dragFONT")) {
-        $(this).append($(ui.helper).clone());
-     //Pointing to the dragImg class in dropHere and add new class.
+        $(".edit-view-body").append($(ui.helper).clone());
+     //Pointing to the dragImg class in dropHere and add new class.	
      $(".edit-view-body .dragTEXT").addClass("item-"+counts[0]);
      $(".edit-view-body .dragTEXT2").addClass("item-"+counts[0]);
      $(".edit-view-body .dragP").addClass("item-"+counts[0]);
@@ -692,7 +692,7 @@ var resizeOpts = {
      $(".edit-view-body .dragTEXT2").addClass("imgSize-"+counts[0]);
      $(".edit-view-body .dragP").addClass("imgSize-"+counts[0]);
      $(".edit-view-body .dragFONT").addClass("imgSize-"+counts[0]);
-        
+     objectEvent();
      //Remove the current class (ui-draggable and dragImg)
      $(".edit-view-body .item-"+counts[0]).removeClass("dragTEXT ui-draggable ui-draggable-dragging");
      $(".edit-view-body .item-"+counts[0]).removeClass("dragTEXT2 ui-draggable ui-draggable-dragging");
@@ -708,8 +708,7 @@ var resizeOpts = {
 
             }
             });
-
-
+        
 var zIndex = 0;
 function make_draggable(elements)
 {   
@@ -719,4 +718,5 @@ function make_draggable(elements)
    stop:function(e,ui){}
    });
 }
+
 }

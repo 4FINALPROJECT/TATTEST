@@ -9,13 +9,13 @@
     <img id="item_delete" src="${pageContext.request.contextPath}/resources/images/editPage/RightTool-img/delete.png"><br><br>
     <img id="item_order" src="${pageContext.request.contextPath}/resources/images/editPage/RightTool-img/order.png"><br><br>
     <label>회전</label><br>
-    <label class="objectData_name_txt">cº</label><input class="objectData_txt" type="number" min="0" max="359" value="0" readOnly="true"><br>
+    <label class="objectData_name_txt">cº</label><input class="objectData_txt" type="number" min="0" max="359" value="0"><br>
     <label>크기</label><br>
-    <label class="objectData_name_txt">w</label><input class="objectData_txt" type="number" min="0" value="0" readOnly="true"><br>
-    <label class="objectData_name_txt">h</label><input class="objectData_txt" type="number" min="0" value="0" readOnly="true"><br>
+    <label class="objectData_name_txt">w</label><input class="objectData_txt" type="number" min="0" value="0"><br>
+    <label class="objectData_name_txt">h</label><input class="objectData_txt" type="number" min="0" value="0"><br>
     <label>위치</label><br>
-    <label class="objectData_name_txt">x</label><input class="objectData_txt" type="number" min="0" value="0" readOnly="true"><br>
-    <label class="objectData_name_txt">y</label><input class="objectData_txt" type="number" min="0" value="0" readOnly="true"><br>
+    <label class="objectData_name_txt">x</label><input class="objectData_txt" type="number" min="0" value="0"><br>
+    <label class="objectData_name_txt">y</label><input class="objectData_txt" type="number" min="0" value="0"><br>
 </div>
 <table id="item_inpo">
         <thead>
