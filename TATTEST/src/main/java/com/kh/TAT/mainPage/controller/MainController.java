@@ -23,7 +23,6 @@ public class MainController {
 	public String Upgrade(){
 		return "mainPage/mainPage_Upgrade";
 	}
-	
 	// 제휴신청 페이지 이동
 	@RequestMapping("/main/Affiliate.tat")
 	public String Affiliate(){

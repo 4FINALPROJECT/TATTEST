@@ -21,6 +21,10 @@
 			class="w3-bar-item w3-btn w3-hide-medium w3-hide-small w3-border-white w3-topbar w3-hover-border-blue w3-hover-text-blue">
 			프리미엄
 		</a>
+		<a href="${pageContext.request.contextPath}/board/Board.tat" 
+			class="w3-bar-item w3-btn w3-hide-medium w3-hide-small w3-border-white w3-topbar w3-hover-border-blue w3-hover-text-blue">
+			갤러리
+		</a>
 		<a href="${pageContext.request.contextPath}/main/Affiliate.tat" 
 			class="w3-bar-item w3-btn w3-hide-medium w3-hide-small w3-border-white w3-topbar w3-hover-border-blue w3-hover-text-blue">
 			제휴신청

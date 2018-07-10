@@ -1,0 +1,169 @@
+@CHARSET "UTF-8";
+
+body, html {
+    height: 99%;
+    line-height: 1.8;
+    font-family: 'Sunflower', sans-serif;
+}
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* 메인 첫번째 이미지 */
+.bgimg-1 {
+    background-image: url('../../images/mainPage/img_sample1.jpg');
+    min-height: 100%;
+}
+/* 메인 두번째 이미지 */
+.bgimg-2 {
+    background-image: url("../../images/mainPage/img_sample2.jpg");
+    min-height: 500px;
+}
+/* 메인 세번째 이미지 */
+.bgimg-3 {
+    background-image: url("../../images/mainPage/img_sample4.jpg");
+    min-height: 500px;
+}
+/* 메인 네번째 이미지 */
+.bgimg-4 {
+    background-image: url("../../images/mainPage/img_sample6.jpg");
+    min-height: 500px;
+}
+.w3-wide {
+	letter-spacing: 10px;
+}
+.w3-hover-opacity {
+	cursor: pointer;
+}
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+        background-attachment: scroll;
+    }
+}
+
+.w3-row-padding img {margin-bottom: 12px}
+.bgimg {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('/w3images/profile_girl.jpg');
+    min-height: 100%;
+}
+.aa{
+	border:1px solid;
+}
+
+/* 로그인 페이지 */
+.signin-input{
+	max-width:700px;
+	margin:auto;
+}
+.signin-sns{
+	max-width:500px;
+	margin:auto;
+}
+
+/* 회원가입 페이지 */
+.signup-input{
+	max-width:700px;
+	margin:auto;
+}
+.signup-sns{
+	max-width:700px;
+	margin:auto;
+}
+
+/* 기능 소개 페이지 */
+.featureBody .carousel-inner img{
+	width: 100%;
+	height: 900px;
+}
+.feature-content{
+	max-width:1200px;
+	margin:auto;
+}
+
+/* 메인 페이지 헤더 */
+.w3-top img{
+	width: auto;
+	height: 40px;
+}
+.mainPage-header{
+	font-size:large;
+}
+
+/* 메인 페이지 풋터 */
+.mainPage-footer li{
+	list-style-type: none;
+}
+
+/* 결제 페이지 */
+.selectUpgrade{
+	max-width:1200px;
+	margin:auto;
+}
+.selectUpgrade .choiceUpgrade{
+	height: 400px;
+}
+/* 갤러리 CSS */
+.gallery-title
+{
+    font-size: 36px;
+    color: #42B32F;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 70px;
+}
+.gallery-title:after {
+    content: "";
+    position: absolute;
+    width: 7.5%;
+    left: 46.5%;
+    height: 45px;
+    border-bottom: 1px solid #5e5e5e;
+}
+.filter-button
+{
+    font-size: 18px;
+    border: 1px solid #42B32F;
+    border-radius: 5px;
+    text-align: center;
+    color: #42B32F;
+    margin-bottom: 30px;
+
+}
+.filter-button:hover
+{
+    font-size: 18px;
+    border: 1px solid #42B32F;
+    border-radius: 5px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #42B32F;
+
+}
+.btn-default:active .filter-button:active
+{
+    background-color: #42B32F;
+    color: white;
+}
+
+.port-image
+{
+    width: 100%;
+}
+
+.gallery_product
+{
+    margin-bottom: 30px;
+}
+.row-centered {
+    text-align:center;
+}
+iframe { 
+	pointer-events: none; 
+}
