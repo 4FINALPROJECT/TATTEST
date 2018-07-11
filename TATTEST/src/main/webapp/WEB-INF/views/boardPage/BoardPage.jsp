@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,6 +12,12 @@
 <c:import url="../common/ICON_CSS_FONTS.jsp"/>
 <!-- CSS File for MyPage -->
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/boardPage/boardPage.css" />
+<script>
+// 템플릿 이동 
+function fn_goBoardForm(){
+	   location.href = "${pageContext.request.contextPath}/main/Template.tat"+{T.file_name}; 
+	}
+</script>
 </head>
 <body>
 	<!-- Header -->
@@ -33,7 +41,7 @@
                 <iframe src="${pageContext.request.contextPath}/main/Feature.tat" frameborder="0" scrolling="no" width="100%" height="100%" style="overflow:hidden;"></iframe>
             <div class="w3-display-middle w3-display-hover">
 		     <button class="w3-button w3-black">상세보기 </button>
-		     <button class="w3-button w3-black">수정 </button>
+		     <button class="w3-button w3-black" onclick="fn_goBoardForm();">수정 </button>
 		    </div>
             </div>
 	

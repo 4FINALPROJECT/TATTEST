@@ -50,6 +50,8 @@
 			class="w3-bar-item w3-btn w3-leftbar w3-hover-border-blue">템플릿</a>
 		<a href="${pageContext.request.contextPath}/main/Upgrade.tat" 
 			class="w3-bar-item w3-btn w3-leftbar w3-hover-border-blue">프리미엄</a>
+		<a href="${pageContext.request.contextPath}/board/Board.tat" 
+			class="w3-bar-item w3-btn w3-leftbar w3-hover-border-blue">갤러리</a>	
 		<a href="${pageContext.request.contextPath}/main/Affiliate.tat" 
 			class="w3-bar-item w3-btn w3-leftbar w3-hover-border-blue">제휴신청</a>
 		<a href="${pageContext.request.contextPath}/main/Help.tat" 
