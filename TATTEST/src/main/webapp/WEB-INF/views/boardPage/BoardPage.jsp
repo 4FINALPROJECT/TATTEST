@@ -1,3 +1,4 @@
+<%@page import="com.kh.TAT.common.Utils"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -15,7 +16,7 @@
 <script>
 // 템플릿 이동 
 function fn_goBoardForm(){
-	   location.href = "${pageContext.request.contextPath}/main/Template.tat"+{T.file_name}; 
+	   location.href = "${pageContext.request.contextPath}/main/Template.tat?no="+${name}; 
 	}
 </script>
 </head>
@@ -31,65 +32,39 @@ function fn_goBoardForm(){
 	        </div>
 	
 	        <div class="col-md-12 row-centered">
-	            <button class="btn btn-default filter-button" data-filter="all">전체 보기</button>
-	            <button class="btn btn-default filter-button" data-filter="hdpe">조회도 순</button>
-	            <button class="btn btn-default filter-button" data-filter="sprinkle">이름 순</button>
-	            <button class="btn btn-default filter-button" data-filter="spray">날짜 순</button>
+	            <button class="btn btn-default filter-button" >전체 보기</button>
+	            <button class="btn btn-default filter-button" >조회도 순</button>
+	            <button class="btn btn-default filter-button" >이름 순</button>
+	            <button class="btn btn-default filter-button" >날짜 순</button>
 	        </div>
 	        <br/>
+	        <c:forEach items="${list}" var="b">
+	        
 			<div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe w3-display-container w3-hover-opacity">
-                <iframe src="${pageContext.request.contextPath}/main/Feature.tat" frameborder="0" scrolling="no" width="100%" height="100%" style="overflow:hidden;"></iframe>
-            <div class="w3-display-middle w3-display-hover">
-		     <button class="w3-button w3-black">상세보기 </button>
-		     <button class="w3-button w3-black" onclick="fn_goBoardForm();">수정 </button>
-		    </div>
-            </div>
-	
-	            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sprinkle">
-	                <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-	            </div>
-	
-	            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
-	                <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-	            </div>
-	
-	            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
-	                <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-	            </div>
-	
-	            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray">
-	                <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-	            </div>
-	
-	            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
-	                <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-	            </div>
-	
-	            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray">
-	                <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-	            </div>
-	
-	            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
-	                <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-	            </div>
-	
-	            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
-	                <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-	            </div>
-	
-	            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
-	                <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-	            </div>
-	
-	            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray">
-	                <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-	            </div>
-	
-	            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sprinkle">
-	                <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-	            </div>
+                <iframe src="${pageContext.request.contextPath}/members/test/project1/views/${b.fileName}" frameborder="0" scrolling="no" width="100%" height="100%" style="overflow:hidden;"></iframe>
+            		<div class="w3-display-middle w3-display-hover">
+		     			<button class="w3-button w3-black">상세보기 </button>
+		     			<button class="w3-button w3-black" onclick="fn_goBoardForm();">수정 </button>
+		    		</div>
+		    	</div>
+		    		</c:forEach>
+            
 	        </div>
 	    </div>
+	    <% 
+	    int totalContents = Integer.parseInt(String.valueOf(request.getAttribute("totalContents")));
+	      int numPerPage = Integer.parseInt(String.valueOf(request.getAttribute("numPerPage")));
+	      
+	      //파라미터 cPage가 null이거나 "" 일 때에는 기본값 1로 세팅함.  
+	      String cPageTemp = request.getParameter("cPage");
+	      int cPage = 1;
+	      try{
+	         cPage = Integer.parseInt(cPageTemp);
+	      } catch(NumberFormatException e){
+	         
+	      }
+	    %>
+	    <%= Utils.getPageBar(totalContents, cPage, numPerPage, "BoardPage.tat") %>
 	</section>
 
 

@@ -6,7 +6,6 @@ import java.util.Map;
 public interface BoardService {
 
 	List<Map<String, String>> selectBoardList(int cPage, int numPerPage);
-	
 
 	int selectBoardTotalContents(); 
 		

@@ -26,14 +26,14 @@ public class BoardDaoImpl implements BoardDao{
 		System.out.println("limit : " + numPerPage);
 		
 		RowBounds rows = new RowBounds((cPage-1)*numPerPage, numPerPage);
-		
+		System.out.println("DAOIMPL"+sqlSession.selectList("board.selectBoardList", null, rows));
 		return sqlSession.selectList("board.selectBoardList", null, rows);
 	}
 
 	@Override
 	public int selectBoardTotalContents() {
-		// TODO Auto-generated method stub
-		return 0;
+		
+		return sqlSession.selectOne("board.selectBoardTotalContents");
 	}
 
 }

@@ -3,6 +3,7 @@ package com.kh.TAT.board.controller;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,12 +14,11 @@ import com.kh.TAT.board.model.service.BoardService;
 @Controller
 public class BoardController {
 	
+	@Autowired
+	BoardService BoardService;
+	
 	// 게시판 페이지 이동
 		@RequestMapping("/board/Board.tat")
-		public String Board(){
-			return "boardPage/BoardPage";
-		}
-		@RequestMapping("/board/boardList.do")
 		public String selectBoardList(
 				@RequestParam(value="cPage", required=false, defaultValue="1")
 				int cPage, Model model){
@@ -31,10 +31,13 @@ public class BoardController {
 			// 2. 전체 게시글 수 구하기
 			int totalContents = BoardService.selectBoardTotalContents();
 			
+			System.out.println("list : "+list);
+			System.out.println("totalContents : "+totalContents);
+			System.out.println("numPerPage : "+numPerPage);
 			model.addAttribute("list", list).addAttribute("numPerPage", numPerPage).addAttribute("totalContents", totalContents);
 			
 			
-			return "board/boardList";		
+			return "boardPage/BoardPage";		
 		}
 		
 
