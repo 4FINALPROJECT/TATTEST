@@ -5,7 +5,7 @@
 	<resultMap type="board" id="boardMap"></resultMap>
 	
 	<select id="selectBoardList" resultType="board">
-		SELECT FILE_NAME, SAVE_DATE , MEMBER_EMAIL FROM TEMPLATE JOIN MEMBER USING(MEMBER_NUM)
+		SELECT * FROM TEMPLATE
 	</select>
 	
 	<select id="selectBoardTotalContents" resultType="_int">

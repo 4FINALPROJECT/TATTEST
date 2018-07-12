@@ -1,4 +1,4 @@
-package com.kh.TAT.common;
+package com.kh.TAT.common.utils;
 
 public class Utils {
 	

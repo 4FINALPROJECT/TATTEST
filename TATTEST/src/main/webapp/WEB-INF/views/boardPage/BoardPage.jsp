@@ -1,4 +1,4 @@
-<%@page import="com.kh.TAT.common.Utils"%>
+<%@page import="com.kh.TAT.common.utils.Utils"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -15,9 +15,9 @@
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/boardPage/boardPage.css" />
 <script>
 // 템플릿 이동 
-function fn_goBoardForm(){
-	   location.href = "${pageContext.request.contextPath}/main/Template.tat?no="+${name}; 
-	}
+/* function fn_goBoardForm(){
+	   location.href = "${pageContext.request.contextPath}/main/Template.tat?no="+${file_name}; 
+	} */
 </script>
 </head>
 <body>
@@ -41,7 +41,7 @@ function fn_goBoardForm(){
 	        <c:forEach items="${list}" var="b">
 	        
 			<div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe w3-display-container w3-hover-opacity">
-                <iframe src="${pageContext.request.contextPath}/members/test/project1/views/${b.fileName}" frameborder="0" scrolling="no" width="100%" height="100%" style="overflow:hidden;"></iframe>
+                <iframe src="${pageContext.request.contextPath}/members/test/project1/views/${b.file_Name}.jsp" frameborder="0" scrolling="no" width="100%" height="100%" style="overflow:hidden;"></iframe>
             		<div class="w3-display-middle w3-display-hover">
 		     			<button class="w3-button w3-black">상세보기 </button>
 		     			<button class="w3-button w3-black" onclick="fn_goBoardForm();">수정 </button>
@@ -64,8 +64,9 @@ function fn_goBoardForm(){
 	         
 	      }
 	    %>
-	    <%= Utils.getPageBar(totalContents, cPage, numPerPage, "BoardPage.tat") %>
+	    <%= com.kh.TAT.common.utils.Utils.getPageBar(totalContents, cPage, numPerPage, "Board.tat") %>
 	</section>
+	
 
 
             
