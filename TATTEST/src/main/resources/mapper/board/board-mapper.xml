@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="board">
+<mapper namespace="FaqBoard">
 
-	<resultMap type="board" id="boardMap"></resultMap>
 	
-	<select id="selectBoardList" resultType="board">
-		SELECT * FROM TEMPLATE
+	
+	<select id="selectBoardAllList" resultType="FaqBoard" parameterType="pagingVo">
+	<![CDATA[
+		SELECT * FROM(SELECT * FROM(
+		SELECT ROWNUM row_num, BOARDALL.* FROM (
+		SELECT * FROM FAQ_BOARD ORDER BY FAQ_DATE DESC) BOARDALL) BOARDALLALL 
+		WHERE row_num >= #{start}) 
+		WHERE row_num <= #{last}
+	]]>
 	</select>
 	
-	<select id="selectBoardTotalContents" resultType="_int">
-		SELECT COUNT(*) FROM TEMPLATE
+	
+	<select id="totalCounts" resultType="_int">
+		SELECT count(*) FROM FAQ_BOARD
 	</select>
 	
 	

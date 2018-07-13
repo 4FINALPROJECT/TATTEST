@@ -1,13 +1,17 @@
 package com.kh.TAT.board.model.service;
 
 import java.util.List;
-import java.util.Map;
+
+import com.kh.TAT.board.model.vo.FaqBoard;
+import com.kh.TAT.board.model.vo.PagingVo;
 
 public interface BoardService {
 
-	List<Map<String, String>> selectBoardList(int cPage, int numPerPage);
+	List<FaqBoard> selectPaging(PagingVo paging);
 
-	int selectBoardTotalContents(); 
-		
+	int selectTotalPaging();
+
+
+	
 	
 }

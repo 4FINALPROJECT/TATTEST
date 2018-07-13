@@ -13,12 +13,7 @@
 <c:import url="../common/ICON_CSS_FONTS.jsp"/>
 <!-- CSS File for MyPage -->
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/boardPage/boardPage.css" />
-<script>
-// 템플릿 이동 
-/* function fn_goBoardForm(){
-	   location.href = "${pageContext.request.contextPath}/main/Template.tat?no="+${file_name}; 
-	} */
-</script>
+
 </head>
 <body>
 	<!-- Header -->
@@ -31,46 +26,47 @@
 	            <h1 class="gallery-title">Gallery</h1>
 	        </div>
 	
-	        <div class="col-md-12 row-centered">
-	            <button class="btn btn-default filter-button" >전체 보기</button>
-	            <button class="btn btn-default filter-button" >조회도 순</button>
-	            <button class="btn btn-default filter-button" >이름 순</button>
-	            <button class="btn btn-default filter-button" >날짜 순</button>
-	        </div>
 	        <br/>
-	        <c:forEach items="${list}" var="b">
 	        
-			<div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe w3-display-container w3-hover-opacity">
-                <iframe src="${pageContext.request.contextPath}/members/test/project1/views/${b.file_Name}.jsp" frameborder="0" scrolling="no" width="100%" height="100%" style="overflow:hidden;"></iframe>
-            		<div class="w3-display-middle w3-display-hover">
-		     			<button class="w3-button w3-black">상세보기 </button>
-		     			<button class="w3-button w3-black" onclick="fn_goBoardForm();">수정 </button>
-		    		</div>
-		    	</div>
-		    		</c:forEach>
-            
+	        
+				<table class="table">
+				  <thead>
+				    <tr>
+				      <th scope="col">#</th>
+				      <th scope="col">First</th>
+				      <th scope="col">Last</th>
+				      <th scope="col">Handle</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				  <c:forEach items="${lists}" var="faq">
+				    <tr>
+				      <th scope="row">${faq.faq_num}</th>
+				      <td>${faq.faq_title}</td>
+				      <td>${faq.faq_content}</td>
+				      <td>${faq.faq_date}</td>
+				    </tr>
+				  </c:forEach>		    
+				  </tbody>
+				</table>
+					<ul class="pagination">
+			            <c:if test="${p.pageStartNum ne 1}">
+			                <!--맨 첫페이지 이동 -->
+			                <li><a onclick='pagePre(${p.pageCnt+1},${p.pageCnt});'>«</a></li>
+			                <!--이전 페이지 이동 -->
+			                <li><a onclick='pagePre(${p.pageStartNum},${p.pageCnt});'>‹</a></li>
+			            </c:if>
+			            
+			            <!--페이지번호 -->
+			            <c:forEach var='i' begin="${p.pageStartNum}" end="${p.pageLastNum}" step="1">
+			                <li class='pageIndex${i}'><a onclick='pageIndex(${i});'>${i}</a></li>
+			            </c:forEach>
+			            
+			            <jsp:include page="../boardPage/Paging.jsp" />
+			        </ul>
 	        </div>
 	    </div>
-	    <% 
-	    int totalContents = Integer.parseInt(String.valueOf(request.getAttribute("totalContents")));
-	      int numPerPage = Integer.parseInt(String.valueOf(request.getAttribute("numPerPage")));
-	      
-	      //파라미터 cPage가 null이거나 "" 일 때에는 기본값 1로 세팅함.  
-	      String cPageTemp = request.getParameter("cPage");
-	      int cPage = 1;
-	      try{
-	         cPage = Integer.parseInt(cPageTemp);
-	      } catch(NumberFormatException e){
-	         
-	      }
-	    %>
-	    <%= com.kh.TAT.common.utils.Utils.getPageBar(totalContents, cPage, numPerPage, "Board.tat") %>
 	</section>
-	
-
-
-            
-	
 	<!-- Footer -->
 	<c:import url="../mainPage/common/mainPage_Footer.jsp"/>
 </body>
